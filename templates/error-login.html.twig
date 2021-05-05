@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ERROR{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .image {max-width: 100%; height: auto;}
+</style>
+
+<div class="example-wrapper">
+    <h1>El login fue incorrecto</h1>
+
+    <strong>El usuario o contraseña fueron incorrectos</strong>
+
+    <div> Por favor <a href="./login">inténtelo de nuevo.</a></div>
+    <hr>
+    
+</div>
+{% endblock %}
