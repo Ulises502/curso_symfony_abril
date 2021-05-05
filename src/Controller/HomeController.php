@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\EntityManagerInterface;
 // llama a la entity User
 use App\Entity\User;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
     * @Route ("/home", name="home")
@@ -20,5 +21,19 @@ Class HomeController extends AbstractController {
     */
     public function Inicio(Request $request) {
         return $this->render('index.html.twig');
+    }
+
+    /**
+    * @Route ("/control", name="control")
+    */
+    public function Control(Request $request): RedirectResponse {
+        return $this->redirectToRoute('Inicio');
+    }
+
+    /**
+    * @Route ("/exito", name="exito")
+    */
+    public function Exito(Request $request) {
+        return $this->render('exito.html.twig');
     }
 };
